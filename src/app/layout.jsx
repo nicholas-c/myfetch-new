@@ -40,6 +40,10 @@ export default function RootLayout({ children }) {
     }
   }, [isOpen]);
 
+  const closeNavigation = () => {
+    setOpen(false);
+  };
+
   return (
     <html lang="en">
       <head />
@@ -116,6 +120,7 @@ export default function RootLayout({ children }) {
               <nav className="flex  flex-col  lg:flex-row  pt-14  lg:pt-0  px-2  lg:w-full  lg:justify-center">
                 <Link
                   href="/"
+                  onClick={closeNavigation}
                   className={clsx(
                     "block  lg:inline  transition  duration-500  delay-75  py-2  my-2  font-black  uppercase  lg:opacity-100  lg:translate-x-0  lg:text-gray-800  lg:mx-4",
                     {
@@ -130,6 +135,7 @@ export default function RootLayout({ children }) {
 
                 <Link
                   href="/dog-walking-rugby"
+                  onClick={closeNavigation}
                   className={clsx(
                     "block  lg:inline  transition  duration-500  delay-150  py-2  my-2  font-black  uppercase  lg:opacity-100  lg:translate-x-0  lg:text-gray-800  lg:mx-4",
                     {
@@ -144,6 +150,7 @@ export default function RootLayout({ children }) {
 
                 <Link
                   href="/pet-sitting-rugby"
+                  onClick={closeNavigation}
                   className={clsx(
                     "block  lg:inline  transition  duration-500  delay-200  py-2  my-2  font-black  uppercase  lg:opacity-100  lg:translate-x-0  lg:text-gray-800  lg:mx-4",
                     {
@@ -158,6 +165,7 @@ export default function RootLayout({ children }) {
 
                 <Link
                   href="/contact"
+                  onClick={closeNavigation}
                   className={clsx(
                     "block  lg:inline  transition  duration-500  delay-300  py-2  my-2  font-black  uppercase  lg:opacity-100  lg:translate-x-0  lg:text-gray-800  lg:mx-4",
                     {
@@ -212,7 +220,7 @@ export default function RootLayout({ children }) {
                   </a>
                 </div>
 
-                <Button href="/contact" fullWidth>
+                <Button href="/contact" fullWidth onClick={closeNavigation}>
                   Contact us
                 </Button>
               </div>
