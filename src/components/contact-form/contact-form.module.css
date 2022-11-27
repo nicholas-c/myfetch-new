@@ -1,0 +1,16 @@
+.formSubmit {
+  width: 150px;
+  display: block;
+  background: #67aaf9;
+
+  border-radius: 0.75rem;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  text-align: center;
+
+  margin: 1rem auto 0;
+
+  &:hover {
+    background: #67b6f9;
+  }
+}
