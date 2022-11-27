@@ -20,6 +20,7 @@ import Logo from "../../public/logo.svg";
 
 import { Button } from "../components/button/button.component";
 import { Footer } from "../components/footer/footer.component";
+import { AnalyticsWrapper } from "../components/analytics";
 
 // const montserrat = Montserrat({
 //   variable: "--font-montserrat",
@@ -231,6 +232,8 @@ export default function RootLayout({ children }) {
         <main>{children}</main>
 
         <Footer />
+
+        <AnalyticsWrapper />
       </body>
     </html>
   );
